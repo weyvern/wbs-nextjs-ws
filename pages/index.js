@@ -18,7 +18,7 @@ const Home = ({ blogData }) => {
       <main>
         <ul className='row list-unstyled'>
           {blogData.map(({ id, description, name, imgurl }) => (
-            <li key={id} className='col'>
+            <li key={id} className='col-md-4 mb-5'>
               <div className='card'>
                 <img
                   className='card-img-top'
