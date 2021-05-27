@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const getStaticProps = async () => {
   const { data: blogData } = await axios.get('https://wbs-nextjs-api.herokuapp.com/recipes');
-  return { props: { blogData } };
+  return { props: { blogData }, revalidate: 10 };
 };
 
 export default function Home({ blogData }) {
